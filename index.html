@@ -212,6 +212,48 @@
       line-height: 1.7;
     }
 
+    /* SCREENSHOTS */
+    .screenshots { background: var(--bg3); }
+    .screenshots-intro { max-width: 560px; margin-bottom: 56px; }
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: start;
+    }
+    .screenshot-main {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--bg2);
+    }
+    .screenshot-main img {
+      width: 100%;
+      display: block;
+    }
+    .screenshot-side {
+      width: 260px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--bg2);
+    }
+    .screenshot-side img {
+      width: 100%;
+      display: block;
+    }
+    .screenshot-caption {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 10px;
+      font-weight: 300;
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .screenshots-grid { grid-template-columns: 1fr; }
+      .screenshot-side { width: 100%; max-width: 320px; }
+    }
+
     /* HOW IT WORKS */
     .how { background: var(--bg); }
     .steps {
@@ -397,9 +439,9 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-tag">Chrome Extension · Drafters Best Ball</div>
+    <div class="hero-tag">Chrome Extension · Drafters NFL Best Ball Only</div>
     <h1>Better Information.<br/><em>Better Drafts.</em></h1>
-    <p>A Chrome extension that adds real-time ownership data, stack tracking, and positional draft capital directly to your Drafters draft board — without ever leaving the page.</p>
+    <p>A Chrome extension that adds real-time ownership data, stack tracking, and positional draft capital directly to your Drafters <strong style="color:var(--text); font-weight:500;">NFL best ball</strong> draft board — without ever leaving the page.</p>
     <div class="hero-actions">
       <a href="https://chrome.google.com/webstore" class="btn-primary">Get the Extension</a>
       <span class="hero-note"><span>$3 / month</span> · Cancel anytime</span>
@@ -430,6 +472,29 @@
     </div>
   </section>
 
+  <!-- SCREENSHOTS -->
+  <section class="screenshots">
+    <div class="section-label">In Action</div>
+    <div class="section-title">See it for yourself.</div>
+    <div class="screenshots-intro">
+      <p class="section-sub">The overlay surfaces ownership, stacks, and draft capital directly inside your NFL best ball draft — no tab switching, no interruptions.</p>
+    </div>
+    <div class="screenshots-grid">
+      <div>
+        <div class="screenshot-main">
+          <img src="screenshots/draft-view.png" alt="Drafters Overlay showing ownership percentages and draft capital on the draft board" />
+        </div>
+        <p class="screenshot-caption">Ownership badges on every player + real-time draft capital tracking by position</p>
+      </div>
+      <div>
+        <div class="screenshot-side">
+          <img src="screenshots/panel-view.png" alt="Drafters Overlay side panel showing picks, stacks, and positional capital bars" />
+        </div>
+        <p class="screenshot-caption">Side panel: my picks, stack indicators, and capital bars</p>
+      </div>
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="how">
     <div class="section-label">Setup</div>
@@ -437,18 +502,18 @@
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
-        <h4>Subscribe</h4>
-        <p>Purchase your $3/month subscription through the extension popup.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
         <h4>Install</h4>
         <p>Add the extension to Chrome from the Web Store in one click.</p>
       </div>
       <div class="step">
+        <div class="step-num">02</div>
+        <h4>Subscribe</h4>
+        <p>Click the extension icon in your toolbar and purchase your $3/month subscription through the popup.</p>
+      </div>
+      <div class="step">
         <div class="step-num">03</div>
-        <h4>Open a Draft</h4>
-        <p>Navigate to any Drafters best ball draft page.</p>
+        <h4>Open an NFL Best Ball Draft</h4>
+        <p>Navigate to any <strong style="color:var(--text); font-weight:500;">NFL best ball</strong> draft page on Drafters.com.</p>
       </div>
       <div class="step">
         <div class="step-num">04</div>
@@ -469,7 +534,7 @@
         <li>Full ownership overlay</li>
         <li>Stack highlighting</li>
         <li>Positional draft capital tracking</li>
-        <li>Works on all Drafters best ball drafts</li>
+        <li>Works on Drafters NFL best ball drafts</li>
         <li>Instant access after payment</li>
       </ul>
       <a href="https://chrome.google.com/webstore" class="btn-cta">Get the Extension</a>
@@ -484,11 +549,11 @@
     <div class="faq-list">
       <div class="faq-item">
         <h4>Does this work on all Drafters drafts?</h4>
-        <p>Yes — the overlay activates automatically on any Drafters best ball draft page.</p>
+        <p>No — the overlay is designed specifically for <strong style="color:var(--text); font-weight:500;">NFL best ball drafts</strong> on Drafters.com. It will not activate on other draft formats or sports.</p>
       </div>
       <div class="faq-item">
         <h4>Do I need to configure anything after installing?</h4>
-        <p>Just install the extension, subscribe, and open a draft. Everything loads automatically.</p>
+        <p>Just install the extension, click the icon to subscribe, then open an NFL best ball draft. Everything loads automatically.</p>
       </div>
       <div class="faq-item">
         <h4>Can I cancel my subscription?</h4>
@@ -534,7 +599,7 @@
         <p>We use Stripe for payment processing and ExtensionPay for subscription management. We do not sell or share your data with any other third parties.</p>
         <br/>
         <p><strong style="color: var(--text); font-weight:500;">Contact</strong></p>
-        <p>Questions? Email us at <a href="mailto:octuplicatex@gmail.com.com" style="color: var(--accent);">octuplicatex@gmail.com.com</a></p>
+        <p>Questions? Email us at <a href="mailto:octuplicatex@gmail.com.com" style="color: var(--accent);">octuplicatex@gmail.com</a></p>
       </div>
       <div class="policy-block" id="refunds">
         <h3>Refund Policy</h3>
